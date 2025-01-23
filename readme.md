@@ -149,20 +149,57 @@ The project contains the following Python scripts:
 9. **`suono_avviso.py`**
    - Plays a system sound upon completion of tasks (designed for macOS).
 
+
 ---
 
 ### **How to Use**
 
-1. Prepare the following files in the program directory:
+1. ***Prepare the following files in the program directory***:
    - `secrets.json` (with your OpenAI API key)
    - `book_config.json`
    - `dati_libro.json`
    - `cover.jpeg`
 
-2. Run the `esegui_tutto.py` script:
-   ```bash
-   python esegui_tutto.py
-3. Follow the on-screen instructions to generate the book.
+2. ***Install the required libraries and dependencies***:
+   To ensure the program works correctly, you need to install the following Python libraries. Run this command in your terminal:
+
+     ```bash
+     pip install openai pypandoc tkinter
+     ```
+****Details of the libraries:****
+
+- **`openai`**: Used to access OpenAI's APIs for generating book content.
+- **`pypandoc`**: Converts the generated Markdown (`book.md`) into EPUB and DOCX formats.
+- **`tkinter`**: Provides the GUI for editing JSON files and managing the process. *(Note: `tkinter` is included with most Python installations but may require additional system setup on some platforms.)*
+
+**System dependencies for `pypandoc`:**
+The `pypandoc` library requires Pandoc to be installed on your system. Follow the instructions below based on your operating system:
+
+- **Ubuntu/Debian**:
+  ```bash
+  sudo apt install pandoc
+  ```
+
+- **macOS**:
+  Install using Homebrew:
+  ```bash
+  brew install pandoc
+  ```
+
+- **Windows**:
+  Download Pandoc from the official website: [https://pandoc.org/installing.html](https://pandoc.org/installing.html)
+
+**Acknowledgments**:
+Special thanks to the creators and maintainers of these libraries for their incredible tools and contributions. This project has no affiliation with OpenAI, Pandoc, or any other software/library mentioned above or in the code.
+
+3. ***Run the `esegui_tutto.py` script***:
+```bash
+python esegui_tutto.py
+```
+*(sometimes you should use python3 instead)*
+
+Follow the on-screen instructions to generate the book.
+
 
 ### **Outputs**
 

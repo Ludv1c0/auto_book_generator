@@ -106,7 +106,8 @@ The program generates complete books automatically by leveraging OpenAI APIs. It
 
 4. **`cover.jpeg`**
    - The cover image for the book in JPEG format.
-
+  
+Please note that some prompts that are sent to OpenAi may contain deprecated api calls, deprecated models, or a prompt that is not exactly suitable for the content you want to generate. Make sure to modify it accordingly.
 ---
 
 ### **Program Components**
